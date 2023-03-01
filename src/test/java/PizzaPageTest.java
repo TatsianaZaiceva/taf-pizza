@@ -7,8 +7,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 import java.util.List;
@@ -22,7 +20,7 @@ public class PizzaPageTest {
         driver = new ChromeDriver();
         driver.get(PizzaPage.URL);
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
     }
     @Test
     public void testTerraPizzaAddPizzaMargaritaToCart() {
@@ -41,8 +39,8 @@ public class PizzaPageTest {
         List<WebElement> Cart = driver.findElements(By.xpath(PizzaPage.PRODUCTS_IN_CART));
         String PizzaMargaritaInCart = Cart.get(0).getText();
         String PizzaMargaritaSizeInCart = driver.findElements(By.xpath(PizzaPage.PIZZA_MARGARITA_SIZE_IN_CART)).get(0).getText();
-        /*System.out.println(PizzaMargaritaInCart);
-        System.out.println(PizzaMargaritaSizeInCart);*/
+        System.out.println(PizzaMargaritaInCart);
+        System.out.println(PizzaMargaritaSizeInCart);
         String Actual = PizzaMargaritaInCart + " (" + PizzaMargaritaSizeInCart + ")";
         System.out.println(Actual);
         Assertions.assertEquals(Expected, Actual);
@@ -62,9 +60,9 @@ public class PizzaPageTest {
         Assertions.assertEquals(PizzaMargarita, Cart.get(0).getText());
         Assertions.assertEquals("Латте", Cart.get(1).getText());
     }
-   @AfterEach
-   public void out() {
-        driver.quit();
-   }
+   //@AfterEach
+   //public void out() {
+     //   driver.quit();
+  // }
 }
 

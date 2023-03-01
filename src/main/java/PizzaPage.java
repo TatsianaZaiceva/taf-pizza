@@ -2,7 +2,7 @@ public class PizzaPage {
     public static final String URL = "https://terrapizza.by/";
     public static final String BTN_CLOSE_COOKIE = "//button[@class='close-icon']";
     public static final String BTN_MENU = "//a[@href='https://terrapizza.by/menu']";
-    public static final String BTN_MENU_PIZZA = "/html/body/div[3]/div[1]/div/div/div/div[3]/div/div[1]/div/div/div[9]/a";
+    public static final String BTN_MENU_PIZZA = "//div[@class='menu-cats-list-item']/a[@href='/catalog/picca']";
 
     public static final String PIZZA_MARGARITA = "//div[@title='Пицца Маргарита']";
     public static final String PIZZA_MARGARITA_SIZE = "//div[@class='custom-dropdown_top prod-size prod-size-id-364']";
