@@ -16,9 +16,9 @@ public class PizzaPage {
 
 
     public static final String BTN_MENU_BAR = "//li[@class='menu-navigation__item']/a[@href='/catalog/bar']";
-    public static final String BAR_LATTE = "";
+    public static final String BAR_LATTE = "//div[@title='Латте']";
     public static final String BAR_LATTE_BTN_CART = "//button[@data-hrf='/cart/add-basket?id=491']";
-    public static final String BAR_LATTE_IS_IN_CART  = "//div[@class='basket__products-item-name']";
+            //"//div[@class='cart-button']//button[@data-id='364']";
     public static final String BUTTON_CLOSE_CART = "//div[@class='basket__content-close']";
 
 
